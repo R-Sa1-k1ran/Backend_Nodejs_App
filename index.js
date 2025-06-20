@@ -17,7 +17,7 @@ mongoose.connect(process.env.mongodb_url)
 .then(()=>console.log("database is connected successfully"))
 .catch(()=>console.log("error occured on database connection"))
 
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
   res.send(`<h1>hello tomato </h1>`)
 })
 
