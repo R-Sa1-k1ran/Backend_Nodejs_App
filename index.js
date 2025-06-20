@@ -7,6 +7,7 @@ const productRoutes = require('./routes/productRoutes.js')
 const app=express()
 dotEnv.config();
 const path = require('path')
+const PORT = process.env.PORT || 4600;
 
 
 app.use(express.json());
@@ -26,6 +27,6 @@ app.use('/firm',firmRoutes)
 app.use('/product',productRoutes)
 app.use('/uploads',express.static('uploads'));
 
-app.listen(process.env.PORT,()=>{
-  console.log(`seerver started and running successfully`)
+app.listen(PORT,()=>{
+  console.log(`seerver started and running at ${PORT}`)
 })
